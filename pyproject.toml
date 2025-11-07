@@ -4,4 +4,27 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "pre-commit>=4.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pyright[nodejs]>=1.1.407",
+    "pytest>=8.4.2",
+    "ruff>=0.14.4",
+]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+include = [
+    "src/*",
+]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "ASYNC", "UP", "FAST001"]
