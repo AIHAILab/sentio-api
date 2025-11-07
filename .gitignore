@@ -5,6 +5,16 @@ build/
 dist/
 wheels/
 *.egg-info
+*.ruff_cache
+
+# IDEs
+**/.vscode
+
+# macOS system files
+.DS_Store
 
 # Virtual environments
 .venv
+
+# Environment variables
+*.env
